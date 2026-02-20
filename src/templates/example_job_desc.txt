@@ -1,0 +1,55 @@
+Senior Software Engineer (Full-Stack)
+TechCorp — San Francisco, CA | Remote OK
+
+About the Role:
+We're looking for an experienced full-stack engineer to join our core platform team. You'll design and build scalable services that power features used by millions of customers daily.
+
+Key Responsibilities:
+- Design and implement backend services using Node.js and PostgreSQL
+- Build responsive React frontends for internal and customer-facing applications
+- Optimize database performance and implement caching strategies
+- Collaborate with product, design, and data teams to define technical solutions
+- Mentor junior engineers and participate in code reviews
+- Participate in on-call rotation to ensure 24/7 service reliability
+- Own full lifecycle of features from ideation through production
+
+Required Skills:
+- 5+ years software engineering experience
+- Expert-level JavaScript/TypeScript
+- Strong React and Node.js experience
+- Database design and optimization (SQL)
+- Cloud infrastructure (AWS preferred)
+- RESTful APIs and API design principles
+- Git and version control
+- Understanding of microservices architecture
+- System design and scalability concepts
+
+Nice to Have:
+- GraphQL experience
+- Docker and container orchestration
+- CI/CD pipeline experience
+- Distributed systems knowledge
+- Open source contributions
+- AWS certification
+
+We Value:
+- Clear communication and documentation
+- Collaborative problem-solving
+- Continuous learning
+- Taking initiative and ownership
+- Attention to detail and code quality
+
+Compensation & Benefits:
+- Competitive salary based on experience ($180k-$250k)
+- Equity in the company
+- Comprehensive health, dental, vision coverage
+- Professional development budget ($5k/year)
+- Flexible work arrangement
+- 4 weeks PTO + flexible holidays
+- Home office setup stipend ($2k)
+
+Company Culture:
+Founded in 2015, TechCorp is a Series B SaaS platform serving enterprise customers. We have 80+ employees across 4 continents and a mission-driven approach to solving complex business problems.
+
+How to Apply:
+Send resume and cover letter to careers@techcorp.example.com. Please include a GitHub profile or portfolio link if available.

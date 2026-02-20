@@ -1,0 +1,13 @@
+{
+  "name": "clusterwitch.github.io",
+  "version": "1.0.0",
+  "description": "Portfolio + Resume Tailor Tool",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "watch": "eleventy --watch"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
