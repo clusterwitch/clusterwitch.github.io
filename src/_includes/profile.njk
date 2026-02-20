@@ -1,0 +1,135 @@
+<!-- PM Profile Template with Warm Neutral + Cool Professional Blend -->
+
+<!-- Header Bar (already in layout, updated nav will reference profile) -->
+
+<!-- Hero Section -->
+<section class="pm-hero">
+  <div class="pm-hero-content">
+    <div class="pm-hero-copy">
+      <h1 class="pm-hero-name">{{ profile.name }}</h1>
+      <p class="pm-hero-subtitle">{{ profile.role }}</p>
+      <ul class="pm-hero-bullets">
+        {% for bullet in profile.heroBullets %}
+          <li>{{ bullet }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="pm-hero-image">
+      <img src="{{ profile.headshot }}" alt="{{ profile.name }}" class="pm-headshot" />
+    </div>
+  </div>
+</section>
+
+<!-- Skills Snapshot -->
+<section class="pm-skills">
+  <div class="pm-section-container">
+    <h2 class="pm-section-title">Skills & Expertise</h2>
+    
+    <div class="pm-skills-grid">
+      {% for category in profile.skillCategories %}
+        <div class="pm-skill-category">
+          <h3 class="pm-skill-category-title">{{ category.name }}</h3>
+          <div class="pm-skill-chips">
+            {% for skill in category.skills %}
+              <span class="pm-skill-chip">{{ skill }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Featured Projects -->
+<section class="pm-projects">
+  <div class="pm-section-container">
+    <h2 class="pm-section-title">Featured Projects</h2>
+    
+    <div class="pm-projects-grid">
+      {% for project in profile.projects %}
+        <article class="pm-project-card">
+          <h3 class="pm-project-title">{{ project.title }}</h3>
+          <p class="pm-project-description">{{ project.description }}</p>
+          
+          <div class="pm-project-role">
+            <h4 class="pm-project-subtitle">My Role</h4>
+            <ul>
+              {% for item in project.myRole %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          
+          <div class="pm-project-outcome">
+            <h4 class="pm-project-subtitle">Outcome</h4>
+            <ul>
+              {% for item in project.outcome %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          
+          {% if project.caseStudyUrl %}
+            <a href="{{ project.caseStudyUrl }}" class="pm-button pm-button-primary">View Case Study</a>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- About Me -->
+<section class="pm-about">
+  <div class="pm-section-container">
+    <h2 class="pm-section-title">About Me</h2>
+    
+    <div class="pm-about-content">
+      <p class="pm-about-bio">{{ profile.bio }}</p>
+      
+      {% if profile.pmPhilosophy %}
+        <div class="pm-about-philosophy">
+          <h3>My PM Philosophy</h3>
+          <p>{{ profile.pmPhilosophy }}</p>
+        </div>
+      {% endif %}
+      
+      {% if profile.certifications %}
+        <div class="pm-about-certs">
+          <h3>Certifications & Coursework</h3>
+          <ul>
+            {% for cert in profile.certifications %}
+              <li>{{ cert }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="pm-contact">
+  <div class="pm-section-container">
+    <h2 class="pm-section-title pm-contact-title">Let's Connect</h2>
+    
+    <div class="pm-contact-links">
+      {% if profile.email %}
+        <a href="mailto:{{ profile.email }}" class="pm-button pm-button-inverse">
+          📧 Email
+        </a>
+      {% endif %}
+      
+      {% if profile.linkedin %}
+        <a href="{{ profile.linkedin }}" target="_blank" class="pm-button pm-button-inverse">
+          💼 LinkedIn
+        </a>
+      {% endif %}
+      
+      {% if profile.resumeUrl %}
+        <a href="{{ profile.resumeUrl }}" target="_blank" class="pm-button pm-button-inverse">
+          📄 Resume
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</section>

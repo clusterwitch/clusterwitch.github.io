@@ -3,35 +3,374 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Resume Tailor</title>
+  <title>Portfolio | Resume Tailor</title>
   <meta name="description" content="Portfolio + AI Resume Tailoring Tool">
   <link rel="stylesheet" href="/assets/css/style.css">
+  
+  <!-- Theme persistence script (run early to prevent FOUC) -->
+  <script>
+    (function() {
+      const THEME_KEY = 'site-theme';
+      const html = document.documentElement;
+      
+      // Get saved theme or use system preference
+      const savedTheme = localStorage.getItem(THEME_KEY);
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+      
+      // Set theme immediately to prevent flash
+      html.setAttribute('data-theme', theme);
+      
+      // Update theme toggle button icon on ready
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.getElementById('themeToggle');
+        if (toggle) {
+          updateToggleIcon();
+          toggle.addEventListener('click', toggleTheme);
+        }
+      });
+      
+      window.toggleTheme = function() {
+        const current = html.getAttribute('data-theme') || 'light';
+        const newTheme = current === 'light' ? 'dark' : 'light';
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem(THEME_KEY, newTheme);
+        updateToggleIcon(newTheme);
+      };
+      
+      function updateToggleIcon(theme) {
+        const toggle = document.getElementById('themeToggle');
+        const icon = toggle?.querySelector('.theme-icon');
+        const current = theme || html.getAttribute('data-theme') || 'light';
+        if (icon) {
+          icon.textContent = current === 'light' ? '🌙' : '☀️';
+        }
+      }
+    })();
+  </script>
 </head>
 <body>
   <header class="site-header">
   <nav>
     <a href="/" class="logo">Resume Tailor</a>
     <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/tool/">Tool</a></li>
-      <li><a href="/about/">About</a></li>
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/pages/tool/">Tool</a></li>
+      <li><a href="/pages/about/">About</a></li>
     </ul>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Dark/Light Mode">
+      <span class="theme-icon">🌙</span>
+    </button>
   </nav>
 </header>
 
   
   <main class="site-main">
-    <h1>Welcome to Resume Tailor</h1>
-<p>This is a portfolio site with an integrated AI-powered resume tailoring tool.</p>
-<h2>Features</h2>
-<ul>
-<li><strong>Portfolio Pages</strong> — Showcase your work</li>
-<li><strong>Resume Tailor</strong> — Upload your resume and job description; AI tailors it for you</li>
-<li><strong>100% Client-Side</strong> — No backend, no server, no data stored</li>
-<li><strong>Privacy-First</strong> — Your API key never leaves your browser</li>
-</ul>
-<h2>Get Started</h2>
-<p>Visit the <a href="/pages/tool/">Resume Tailor Tool</a> to begin.</p>
+    
+<!-- PM Profile Template with Warm Neutral + Cool Professional Blend -->
+
+<!-- Header Bar (already in layout, updated nav will reference profile) -->
+
+<!-- Hero Section -->
+<section class="pm-hero">
+  <div class="pm-hero-content">
+    <div class="pm-hero-copy">
+      <h1 class="pm-hero-name">Jessica Spell</h1>
+      <p class="pm-hero-subtitle">Entry-Level Project Manager</p>
+      <ul class="pm-hero-bullets">
+        
+          <li>13+ years coordinating technical operations, gathering requirements, and supporting cross-functional delivery</li>
+        
+          <li>Strong foundation in Computer Science, agile methodologies, cloud technologies, and workflow optimization</li>
+        
+          <li>Experienced in translating user needs into actionable tasks, improving processes, and supporting project execution</li>
+        
+      </ul>
+    </div>
+    <div class="pm-hero-image">
+      <img src="/assets/images/clusterwitch.png" alt="Jessica Spell" class="pm-headshot" />
+    </div>
+  </div>
+</section>
+
+<!-- Skills Snapshot -->
+<section class="pm-skills">
+  <div class="pm-section-container">
+    <h2 class="pm-section-title">Skills & Expertise</h2>
+    
+    <div class="pm-skills-grid">
+      
+        <div class="pm-skill-category">
+          <h3 class="pm-skill-category-title">Project Management</h3>
+          <div class="pm-skill-chips">
+            
+              <span class="pm-skill-chip">Requirements Gathering</span>
+            
+              <span class="pm-skill-chip">User Stories</span>
+            
+              <span class="pm-skill-chip">Task Prioritization</span>
+            
+              <span class="pm-skill-chip">Project Scheduling</span>
+            
+              <span class="pm-skill-chip">Risk Identification</span>
+            
+              <span class="pm-skill-chip">Process Improvement</span>
+            
+          </div>
+        </div>
+      
+        <div class="pm-skill-category">
+          <h3 class="pm-skill-category-title">Technical</h3>
+          <div class="pm-skill-chips">
+            
+              <span class="pm-skill-chip">Cloud (AWS, GCP)</span>
+            
+              <span class="pm-skill-chip">HTML/CSS/JavaScript/PHP</span>
+            
+              <span class="pm-skill-chip">Salesforce</span>
+            
+              <span class="pm-skill-chip">Knowledge Base Systems</span>
+            
+              <span class="pm-skill-chip">Technical Troubleshooting</span>
+            
+          </div>
+        </div>
+      
+        <div class="pm-skill-category">
+          <h3 class="pm-skill-category-title">Methodologies</h3>
+          <div class="pm-skill-chips">
+            
+              <span class="pm-skill-chip">Agile</span>
+            
+              <span class="pm-skill-chip">Scrum</span>
+            
+              <span class="pm-skill-chip">Design Thinking</span>
+            
+              <span class="pm-skill-chip">Iterative Development</span>
+            
+          </div>
+        </div>
+      
+        <div class="pm-skill-category">
+          <h3 class="pm-skill-category-title">Tools &amp; Platforms</h3>
+          <div class="pm-skill-chips">
+            
+              <span class="pm-skill-chip">Jira</span>
+            
+              <span class="pm-skill-chip">Confluence</span>
+            
+              <span class="pm-skill-chip">Figma (basic)</span>
+            
+              <span class="pm-skill-chip">Miro</span>
+            
+              <span class="pm-skill-chip">Google Workspace</span>
+            
+              <span class="pm-skill-chip">Microsoft 365</span>
+            
+          </div>
+        </div>
+      
+        <div class="pm-skill-category">
+          <h3 class="pm-skill-category-title">Soft Skills</h3>
+          <div class="pm-skill-chips">
+            
+              <span class="pm-skill-chip">Cross-Functional Collaboration</span>
+            
+              <span class="pm-skill-chip">Communication</span>
+            
+              <span class="pm-skill-chip">Stakeholder Alignment</span>
+            
+              <span class="pm-skill-chip">Problem Solving</span>
+            
+              <span class="pm-skill-chip">Customer Insights</span>
+            
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Featured Projects -->
+<section class="pm-projects">
+  <div class="pm-section-container">
+    <h2 class="pm-section-title">Featured Projects</h2>
+    
+    <div class="pm-projects-grid">
+      
+        <article class="pm-project-card">
+          <h3 class="pm-project-title">Lead Technology Coordinator / Technical Project Operations — Barr &amp; Associates</h3>
+          <p class="pm-project-description">Led technical coordination, requirements gathering, and internal project execution to support business growth and operational efficiency.</p>
+          
+          <div class="pm-project-role">
+            <h4 class="pm-project-subtitle">My Role</h4>
+            <ul>
+              
+                <li>Gathered requirements from leadership, technical teams, and end-users to define project needs and clarify scope</li>
+              
+                <li>Translated user feedback and system issues into actionable tasks, user stories, and acceptance criteria</li>
+              
+                <li>Coordinated cross-functional teams to troubleshoot issues, validate fixes, and support smooth feature rollouts</li>
+              
+                <li>Created and maintained detailed knowledge-base documentation, reducing repeat support requests and improving onboarding</li>
+              
+                <li>Used Salesforce to identify recurring customer pain points and surface insights that informed process and system improvements</li>
+              
+                <li>Led small-scale internal projects including workflow redesigns, tool upgrades, and process optimization initiatives</li>
+              
+                <li>Applied agile practices by organizing tasks, prioritizing work, and ensuring timely delivery of technical updates</li>
+              
+                <li>Participated in design thinking–style sessions to improve workflows and enhance user experience</li>
+              
+                <li>Conducted informal market and tool evaluations to recommend technologies aligned with business needs</li>
+              
+                <li>Collaborated with engineering and design resources to ensure clarity of requirements and alignment on deliverables</li>
+              
+            </ul>
+          </div>
+          
+          <div class="pm-project-outcome">
+            <h4 class="pm-project-subtitle">Outcome</h4>
+            <ul>
+              
+                <li>Reduced support requests through improved documentation and knowledge sharing</li>
+              
+                <li>Improved internal workflows and tool usability through cross-functional collaboration</li>
+              
+                <li>Supported project delivery and small-scale product initiatives aligned with business growth</li>
+              
+            </ul>
+          </div>
+          
+          
+        </article>
+      
+        <article class="pm-project-card">
+          <h3 class="pm-project-title">Enterprise Customer Support Representative — Genesis Telecom</h3>
+          <p class="pm-project-description">Supported enterprise customers with complex technical issues and collaborated with engineering teams to resolve escalations.</p>
+          
+          <div class="pm-project-role">
+            <h4 class="pm-project-subtitle">My Role</h4>
+            <ul>
+              
+                <li>Assisted enterprise customers with complex technical issues, providing tailored solutions to optimize operations</li>
+              
+                <li>Documented customer feedback and recurring issues, contributing insights that informed product and service improvements</li>
+              
+                <li>Collaborated with engineering and product teams to escalate issues, validate fixes, and ensure customer satisfaction</li>
+              
+                <li>Translated technical concepts into clear, user-friendly explanations for non-technical stakeholders</li>
+              
+            </ul>
+          </div>
+          
+          <div class="pm-project-outcome">
+            <h4 class="pm-project-subtitle">Outcome</h4>
+            <ul>
+              
+                <li>Improved customer satisfaction through tailored solutions</li>
+              
+                <li>Provided product and engineering teams with actionable customer insights</li>
+              
+                <li>Strengthened cross-functional communication channels</li>
+              
+            </ul>
+          </div>
+          
+          
+        </article>
+      
+        <article class="pm-project-card">
+          <h3 class="pm-project-title">Assistant Webmaster — Piedmont Technical College</h3>
+          <p class="pm-project-description">Supported website updates, maintenance, and content management using HTML, CSS, JavaScript, and PHP.</p>
+          
+          <div class="pm-project-role">
+            <h4 class="pm-project-subtitle">My Role</h4>
+            <ul>
+              
+                <li>Updated and maintained website content using HTML, CSS, JavaScript, and PHP</li>
+              
+                <li>Troubleshot site issues and contributed to user experience improvements</li>
+              
+                <li>Gathered requirements from staff and implemented requested changes</li>
+              
+            </ul>
+          </div>
+          
+          <div class="pm-project-outcome">
+            <h4 class="pm-project-subtitle">Outcome</h4>
+            <ul>
+              
+                <li>Gained hands-on technical and requirements gathering experience</li>
+              
+                <li>Contributed to improved site usability and content accuracy</li>
+              
+            </ul>
+          </div>
+          
+          
+        </article>
+      
+    </div>
+  </div>
+</section>
+
+<!-- About Me -->
+<section class="pm-about">
+  <div class="pm-section-container">
+    <h2 class="pm-section-title">About Me</h2>
+    
+    <div class="pm-about-content">
+      <p class="pm-about-bio">Entry-level Project Manager with 13+ years of experience coordinating technical operations, gathering requirements, supporting enterprise customers, and collaborating across engineering, design, and business teams. Strong foundation in Computer Science, agile methodologies, cloud technologies, and workflow optimization. Skilled in translating user needs into actionable tasks, improving processes, and supporting cross-functional delivery. Currently pursuing CAPM certification to deepen project management expertise.</p>
+      
+      
+        <div class="pm-about-philosophy">
+          <h3>My PM Philosophy</h3>
+          <p>Great PMs create clarity, reduce friction, and ensure teams can deliver. I believe in gathering requirements thoroughly, documenting clearly, and keeping stakeholders aligned through transparent communication. My approach is collaborative, structured, and focused on delivering measurable improvements.</p>
+        </div>
+      
+      
+      
+        <div class="pm-about-certs">
+          <h3>Certifications & Coursework</h3>
+          <ul>
+            
+              <li>CAPM — Certified Associate in Project Management (Studying)</li>
+            
+          </ul>
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="pm-contact">
+  <div class="pm-section-container">
+    <h2 class="pm-section-title pm-contact-title">Let's Connect</h2>
+    
+    <div class="pm-contact-links">
+      
+        <a href="mailto:jessicalspell9@gmail.com" class="pm-button pm-button-inverse">
+          📧 Email
+        </a>
+      
+      
+      
+        <a href="https://linkedin.com/in/jessica" target="_blank" class="pm-button pm-button-inverse">
+          💼 LinkedIn
+        </a>
+      
+      
+      
+        <a href="/assets/files/jessica-resume.pdf" target="_blank" class="pm-button pm-button-inverse">
+          📄 Resume
+        </a>
+      
+    </div>
+  </div>
+</section>
+
 
   </main>
   

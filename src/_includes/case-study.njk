@@ -1,0 +1,75 @@
+<!-- Case Study Template -->
+
+<article class="pm-case-study">
+  <div class="pm-section-container">
+    
+    <div class="pm-case-study-header">
+      <a href="/pm/" class="pm-case-study-back">← Back to Portfolio</a>
+      <h1 class="pm-case-study-title">{{ caseStudy.title }}</h1>
+      <p class="pm-case-study-subtitle">{{ caseStudy.subtitle }}</p>
+    </div>
+
+    <!-- Problem Section -->
+    <section class="pm-case-study-section pm-case-study-problem">
+      <h2>The Problem</h2>
+      <div class="pm-case-study-content">
+        {{ caseStudy.problem | safe }}
+      </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="pm-case-study-section pm-case-study-approach">
+      <h2>My Approach</h2>
+      <div class="pm-case-study-content">
+        {{ caseStudy.approach | safe }}
+      </div>
+    </section>
+
+    <!-- Tools & Timeline -->
+    <div class="pm-case-study-grid">
+      
+      <section class="pm-case-study-section pm-case-study-tools">
+        <h3>Tools & Methods</h3>
+        <ul class="pm-case-study-list">
+          {% for tool in caseStudy.tools %}
+            <li>{{ tool }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      <section class="pm-case-study-section pm-case-study-timeline">
+        <h3>Timeline</h3>
+        <p>{{ caseStudy.timeline }}</p>
+      </section>
+
+    </div>
+
+    <!-- Outcome Section -->
+    <section class="pm-case-study-section pm-case-study-outcome">
+      <h2>Outcome</h2>
+      <div class="pm-case-study-content">
+        <ul class="pm-case-study-metrics">
+          {% for metric in caseStudy.metrics %}
+            <li>
+              <strong>{{ metric.label }}:</strong> {{ metric.result }}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+
+    <!-- Lessons Section -->
+    <section class="pm-case-study-section pm-case-study-lessons">
+      <h2>What I Learned</h2>
+      <div class="pm-case-study-content">
+        {{ caseStudy.lessons | safe }}
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="pm-case-study-cta">
+      <a href="/pm/" class="pm-button pm-button-primary">← Back to Portfolio</a>
+    </div>
+
+  </div>
+</article>

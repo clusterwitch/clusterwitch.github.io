@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "DEPLOY.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "DEPLOY"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "DEPLOY.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for README"
+              "title": "Backlinks for DEPLOY"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "DEPLOY.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from README"
+              "title": "Outgoing links from DEPLOY"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "DEPLOY.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
+              "title": "Outline of DEPLOY"
             }
           }
         ]
@@ -184,5 +184,28 @@
     }
   },
   "active": "33c02054ccba6333",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "_site/pm/case-studies/onboarding-redesign/index.html",
+    "_site/pm/case-studies/cloud-migration/index.html",
+    "_site/pm/case-studies/onboarding-redesign",
+    "_site/pm/case-studies/cloud-migration",
+    "_site/pm/case-studies",
+    "_site/pm",
+    "_site/index.html",
+    "_site/pages/tool/index.html",
+    "_site/pages/about/index.html",
+    "_site/pages/tool",
+    "_site/pages/about",
+    "_site/assets/images/clusterwitch.png",
+    "_site/templates/output_template.md",
+    "_site/templates/ai_prompt.md",
+    "src/assets/images/clusterwitch.png",
+    "DOCS_INDEX.md",
+    "PROJECT_COMPLETE.md",
+    "src/pages/pm/case-studies/cloud-migration.md",
+    "PROJECT_PLAN.md",
+    "QUICKSTART.md",
+    "src/pages/pm/case-studies/onboarding-redesign.md",
+    "README.md"
+  ]
 }

@@ -1,0 +1,121 @@
+{
+  "name": "Jessica Spell",
+  "role": "Entry-Level Project Manager",
+  "headshot": "/assets/images/clusterwitch.png",
+  "email": "jessicalspell9@gmail.com",
+  "linkedin": "https://linkedin.com/in/jessica",
+  "resumeUrl": "/assets/files/jessica-resume.pdf",
+  "location": "Newberry, SC",
+  "phone": "803-940-1500",
+  "tagline": "Project Coordination | Agile | Technical Operations | Cross-Functional Delivery",
+  "heroBullets": [
+    "13+ years coordinating technical operations, gathering requirements, and supporting cross-functional delivery",
+    "Strong foundation in Computer Science, agile methodologies, cloud technologies, and workflow optimization",
+    "Experienced in translating user needs into actionable tasks, improving processes, and supporting project execution"
+  ],
+  "skillCategories": [
+    {
+      "name": "Project Management",
+      "skills": ["Requirements Gathering", "User Stories", "Task Prioritization", "Project Scheduling", "Risk Identification", "Process Improvement"]
+    },
+    {
+      "name": "Technical",
+      "skills": ["Cloud (AWS, GCP)", "HTML/CSS/JavaScript/PHP", "Salesforce", "Knowledge Base Systems", "Technical Troubleshooting"]
+    },
+    {
+      "name": "Methodologies",
+      "skills": ["Agile", "Scrum", "Design Thinking", "Iterative Development"]
+    },
+    {
+      "name": "Tools & Platforms",
+      "skills": ["Jira", "Confluence", "Figma (basic)", "Miro", "Google Workspace", "Microsoft 365"]
+    },
+    {
+      "name": "Soft Skills",
+      "skills": ["Cross-Functional Collaboration", "Communication", "Stakeholder Alignment", "Problem Solving", "Customer Insights"]
+    }
+  ],
+  "tools": ["Jira", "Confluence", "Salesforce", "Figma (basic)", "Miro", "AWS", "GCP", "HTML/CSS/JS", "PHP", "Google Workspace", "Microsoft 365"],
+  "projects": [
+    {
+      "title": "Lead Technology Coordinator / Technical Project Operations — Barr & Associates",
+      "period": "2011 – 2024",
+      "location": "Columbia, SC (Hybrid)",
+      "description": "Led technical coordination, requirements gathering, and internal project execution to support business growth and operational efficiency.",
+      "myRole": [
+        "Gathered requirements from leadership, technical teams, and end-users to define project needs and clarify scope",
+        "Translated user feedback and system issues into actionable tasks, user stories, and acceptance criteria",
+        "Coordinated cross-functional teams to troubleshoot issues, validate fixes, and support smooth feature rollouts",
+        "Created and maintained detailed knowledge-base documentation, reducing repeat support requests and improving onboarding",
+        "Used Salesforce to identify recurring customer pain points and surface insights that informed process and system improvements",
+        "Led small-scale internal projects including workflow redesigns, tool upgrades, and process optimization initiatives",
+        "Applied agile practices by organizing tasks, prioritizing work, and ensuring timely delivery of technical updates",
+        "Participated in design thinking–style sessions to improve workflows and enhance user experience",
+        "Conducted informal market and tool evaluations to recommend technologies aligned with business needs",
+        "Collaborated with engineering and design resources to ensure clarity of requirements and alignment on deliverables"
+      ],
+      "outcome": [
+        "Reduced support requests through improved documentation and knowledge sharing",
+        "Improved internal workflows and tool usability through cross-functional collaboration",
+        "Supported project delivery and small-scale product initiatives aligned with business growth"
+      ]
+    },
+    {
+      "title": "Enterprise Customer Support Representative — Genesis Telecom",
+      "period": "2009 – 2011",
+      "location": "On-Site",
+      "description": "Supported enterprise customers with complex technical issues and collaborated with engineering teams to resolve escalations.",
+      "myRole": [
+        "Assisted enterprise customers with complex technical issues, providing tailored solutions to optimize operations",
+        "Documented customer feedback and recurring issues, contributing insights that informed product and service improvements",
+        "Collaborated with engineering and product teams to escalate issues, validate fixes, and ensure customer satisfaction",
+        "Translated technical concepts into clear, user-friendly explanations for non-technical stakeholders"
+      ],
+      "outcome": [
+        "Improved customer satisfaction through tailored solutions",
+        "Provided product and engineering teams with actionable customer insights",
+        "Strengthened cross-functional communication channels"
+      ]
+    },
+    {
+      "title": "Assistant Webmaster — Piedmont Technical College",
+      "period": "2007 – 2008",
+      "location": "On-Site",
+      "description": "Supported website updates, maintenance, and content management using HTML, CSS, JavaScript, and PHP.",
+      "myRole": [
+        "Updated and maintained website content using HTML, CSS, JavaScript, and PHP",
+        "Troubleshot site issues and contributed to user experience improvements",
+        "Gathered requirements from staff and implemented requested changes"
+      ],
+      "outcome": [
+        "Gained hands-on technical and requirements gathering experience",
+        "Contributed to improved site usability and content accuracy"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Associate Degree in Computer Science & Information Technology",
+      "school": "Piedmont Technical College",
+      "year": "2009"
+    }
+  ],
+  "certifications": [
+    "CAPM — Certified Associate in Project Management (Studying)"
+  ],
+  "bio": "Entry-level Project Manager with 13+ years of experience coordinating technical operations, gathering requirements, supporting enterprise customers, and collaborating across engineering, design, and business teams. Strong foundation in Computer Science, agile methodologies, cloud technologies, and workflow optimization. Skilled in translating user needs into actionable tasks, improving processes, and supporting cross-functional delivery. Currently pursuing CAPM certification to deepen project management expertise.",
+  "pmPhilosophy": "Great PMs create clarity, reduce friction, and ensure teams can deliver. I believe in gathering requirements thoroughly, documenting clearly, and keeping stakeholders aligned through transparent communication. My approach is collaborative, structured, and focused on delivering measurable improvements.",
+  "coverLetter": {
+    "target": "IBM Entry Level Project Manager",
+    "body": "I'm excited to apply for the Entry Level Project Manager position at IBM. With over 13 years of experience coordinating technical operations, gathering requirements, and supporting cross-functional teams, I bring a strong foundation in communication, problem-solving, and project execution. My Associate Degree in Computer Science, hands-on cloud experience, and current CAPM studies further support my transition into project management.\n\nIn my role as Lead Technology Coordinator at Barr & Associates, I gathered user feedback, documented requirements, created knowledge-base content, and partnered with engineering and design teams to improve internal tools and workflows. I regularly translated customer insights into actionable tasks and supported small-scale project initiatives—work that aligns closely with IBM's focus on agile practices, design thinking, and cross-portfolio collaboration.\n\nI'm drawn to IBM's commitment to innovation and its structured approach to project delivery. I would welcome the opportunity to support project teams, contribute to the Idea Hub, and help drive efficiency across IBM's project management processes.\n\nThank you for your consideration. I look forward to the opportunity to discuss how my background and growth mindset can support IBM's mission."
+  },
+  "ibmHighlights": [
+    "Experience gathering requirements and translating them into actionable tasks",
+    "Strong communication and documentation skills",
+    "Exposure to agile and design thinking practices",
+    "Cloud familiarity (AWS, GCP)",
+    "Cross-functional collaboration with engineering, design, and leadership",
+    "Track record of self-directed execution and attention to detail",
+    "Technical foundation from CS degree + 13 years of hands-on experience"
+  ]
+}

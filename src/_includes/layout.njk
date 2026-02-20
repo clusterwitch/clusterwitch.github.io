@@ -6,6 +6,48 @@
   <title>{{ title }} | {{ site.title }}</title>
   <meta name="description" content="{{ description or site.description }}">
   <link rel="stylesheet" href="/assets/css/style.css">
+  
+  <!-- Theme persistence script (run early to prevent FOUC) -->
+  <script>
+    (function() {
+      const THEME_KEY = 'site-theme';
+      const html = document.documentElement;
+      
+      // Get saved theme or use system preference
+      const savedTheme = localStorage.getItem(THEME_KEY);
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+      
+      // Set theme immediately to prevent flash
+      html.setAttribute('data-theme', theme);
+      
+      // Update theme toggle button icon on ready
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.getElementById('themeToggle');
+        if (toggle) {
+          updateToggleIcon();
+          toggle.addEventListener('click', toggleTheme);
+        }
+      });
+      
+      window.toggleTheme = function() {
+        const current = html.getAttribute('data-theme') || 'light';
+        const newTheme = current === 'light' ? 'dark' : 'light';
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem(THEME_KEY, newTheme);
+        updateToggleIcon(newTheme);
+      };
+      
+      function updateToggleIcon(theme) {
+        const toggle = document.getElementById('themeToggle');
+        const icon = toggle?.querySelector('.theme-icon');
+        const current = theme || html.getAttribute('data-theme') || 'light';
+        if (icon) {
+          icon.textContent = current === 'light' ? '🌙' : '☀️';
+        }
+      }
+    })();
+  </script>
 </head>
 <body>
   {% include "header.njk" %}
