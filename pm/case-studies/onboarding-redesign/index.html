@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study: Onboarding Flow Redesign | Resume Tailor</title>
+  <meta name="description" content="Portfolio + AI Resume Tailoring Tool">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+  <!-- Theme persistence script (run early to prevent FOUC) -->
+  <script>
+    (function() {
+      const THEME_KEY = 'site-theme';
+      const html = document.documentElement;
+      
+      // Get saved theme or use system preference
+      const savedTheme = localStorage.getItem(THEME_KEY);
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+      
+      // Set theme immediately to prevent flash
+      html.setAttribute('data-theme', theme);
+      
+      // Update theme toggle button icon on ready
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.getElementById('themeToggle');
+        if (toggle) {
+          updateToggleIcon();
+          toggle.addEventListener('click', toggleTheme);
+        }
+      });
+      
+      window.toggleTheme = function() {
+        const current = html.getAttribute('data-theme') || 'light';
+        const newTheme = current === 'light' ? 'dark' : 'light';
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem(THEME_KEY, newTheme);
+        updateToggleIcon(newTheme);
+      };
+      
+      function updateToggleIcon(theme) {
+        const toggle = document.getElementById('themeToggle');
+        const icon = toggle?.querySelector('.theme-icon');
+        const current = theme || html.getAttribute('data-theme') || 'light';
+        if (icon) {
+          icon.textContent = current === 'light' ? '🌙' : '☀️';
+        }
+      }
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+  <nav>
+    <a href="/" class="logo">Resume Tailor</a>
+    <ul>
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/pages/tool/">Tool</a></li>
+      <li><a href="/pages/about/">About</a></li>
+    </ul>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Dark/Light Mode">
+      <span class="theme-icon">🌙</span>
+    </button>
+  </nav>
+</header>
+
+  
+  <main class="site-main">
+    <!-- Case Study Template -->
+<article class="pm-case-study">
+  <div class="pm-section-container">
+<p><div class="pm-case-study-header">
+<a href="/pm/" class="pm-case-study-back">← Back to Portfolio</a>
+<h1 class="pm-case-study-title">Onboarding Flow Redesign</h1>
+<p class="pm-case-study-subtitle">Reducing sign-up drop-off through cross-team coordination and user research</p>
+</div></p>
+<p><!-- Problem Section -->
+<section class="pm-case-study-section pm-case-study-problem">
+<h2>The Problem</h2>
+<div class="pm-case-study-content">
+<p>Our mobile app had an 18% drop-off rate during onboarding—users started the process but never completed account creation. Business metrics showed that getting users through onboarding was the #1 lever for user acquisition.</p><p>The existing flow had been built in isolation without recent user feedback. We had no data on where, exactly, users were dropping off or why.</p>
+</div>
+</section></p>
+<p><!-- Approach Section -->
+<section class="pm-case-study-section pm-case-study-approach">
+<h2>My Approach</h2>
+<div class="pm-case-study-content">
+<ul><li><strong>User research:</strong> Conducted moderated interviews with 15 new users to understand pain points, frustrations, and moments of abandonment</li><li><strong>Requirements documentation:</strong> Created detailed user stories in Jira, mapping the current state and desired future flows</li><li><strong>Cross-team collaboration:</strong> Facilitated weekly syncs with product, design, and backend engineering to ensure aligned priorities and realistic timelines</li><li><strong>Risk management:</strong> Identified scope creep potential early; created a 'parking lot' for post-launch features to stay on schedule</li><li><strong>Stakeholder communication:</strong> Provided bi-weekly status updates with metrics on progress, blockers, and timeline adjustments</li></ul>
+</div>
+</section></p>
+<p><!-- Tools & Timeline -->
+<div class="pm-case-study-grid"></p>
+<p><section class="pm-case-study-section pm-case-study-tools">
+<h3>Tools &amp; Methods</h3>
+<ul class="pm-case-study-list"></p>
+<p><li>Jira for sprint planning and user story management</li></p>
+<p><li>Notion for collaborative requirements documentation</li></p>
+<p><li>Figma for prototype review and feedback loops</li></p>
+<p><li>Google Analytics for drop-off point analysis</li></p>
+<p><li>Confluence for decision logs and architectural docs</li></p>
+<p></ul>
+</section></p>
+<p><section class="pm-case-study-section pm-case-study-timeline">
+<h3>Timeline</h3>
+<p>8-week sprint cycle (Jan–Feb 2024). Launched mid-sprint after phased rollout to mitigate risk.</p>
+</section></p>
+<p></div></p>
+<p><!-- Outcome Section -->
+<section class="pm-case-study-section pm-case-study-outcome">
+<h2>Outcome</h2>
+<div class="pm-case-study-content">
+<ul class="pm-case-study-metrics"></p>
+<p><li>
+<strong>Sign-up Drop-off Rate:</strong> Reduced from 18% → 14% (22% improvement)
+</li></p>
+<p><li>
+<strong>Time to Completion:</strong> Average 2m 15s → 1m 40s (27% faster)
+</li></p>
+<p><li>
+<strong>Team Feedback:</strong> Requirement clarity rated 4.2/5 (vs 2.8/5 in previous project)
+</li></p>
+<p><li>
+<strong>Delivered On-Time:</strong> Yes—no delays despite mid-project scope refinement
+</li></p>
+<p></ul>
+</div>
+</section></p>
+<p><!-- Lessons Section -->
+<section class="pm-case-study-section pm-case-study-lessons">
+<h2>What I Learned</h2>
+<div class="pm-case-study-content">
+<p><strong>1. User research beats assumptions.</strong> We discovered that users weren't abandoning due to complexity—they were confused by the purpose of each field. Clearer labeling had higher impact than UX redesign alone.</p><p><strong>2. Written requirements reduce meeting load.</strong> By documenting stories in Jira early, we cut weekly sync times from 2 hours → 45 minutes. Teams moved faster because they had clarity going in.</p><p><strong>3. Protect the baseline.</strong> I created a 'must-have' vs 'nice-to-have' list. When scope crept (it always does), we had a shared reference point. This saved us 3 weeks of back-and-forth.</p><p><strong>4. Visibility compounds trust.</strong> Bi-weekly stakeholder updates weren't just noise—they built confidence. When executives saw the drop-off data improving in real time, they became advocates, not blockers.</p>
+</div>
+</section></p>
+<p><!-- CTA -->
+<div class="pm-case-study-cta">
+<a href="/pm/" class="pm-button pm-button-primary">← Back to Portfolio</a>
+</div></p>
+  </div>
+</article>
+
+  </main>
+  
+  <footer class="site-footer">
+  <p>&copy; 2026 You. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

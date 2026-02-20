@@ -1,0 +1,62 @@
+{
+  "name": "Jane Smith",
+  "email": "jane.smith@example.com",
+  "phone": "+1-555-0123",
+  "location": "San Francisco, CA",
+  "summary": "Experienced full-stack engineer with 8 years building scalable web applications. Expertise in React, Node.js, cloud architecture, and team leadership.",
+  "experience": [
+    {
+      "title": "Senior Software Engineer",
+      "company": "TechCorp",
+      "location": "San Francisco, CA",
+      "startDate": "2021-01",
+      "endDate": "present",
+      "responsibilities": [
+        "Led team of 5 engineers in redesigning core payment system, reducing latency by 60%",
+        "Architected microservices migration from monolith, enabling 3x scaling capacity",
+        "Implemented CI/CD pipeline reducing deployment time from 2 hours to 15 minutes",
+        "Mentored 3 junior engineers, 2 promoted to mid-level within 18 months"
+      ],
+      "technologies": ["React", "Node.js", "AWS", "Docker", "PostgreSQL"]
+    },
+    {
+      "title": "Software Engineer",
+      "company": "StartupXYZ",
+      "location": "Remote",
+      "startDate": "2018-06",
+      "endDate": "2020-12",
+      "responsibilities": [
+        "Built real-time analytics dashboard serving 50k+ daily active users",
+        "Optimized database queries improving page load time by 45%",
+        "Collaborated with product team to define technical requirements for 10+ features",
+        "On-call rotation maintaining 99.9% uptime for production services"
+      ],
+      "technologies": ["React", "Express.js", "MongoDB", "GraphQL", "AWS Lambda"]
+    }
+  ],
+  "skills": [
+    "JavaScript/TypeScript",
+    "React",
+    "Node.js",
+    "AWS",
+    "Docker",
+    "PostgreSQL",
+    "System Design",
+    "Team Leadership",
+    "Agile/Scrum"
+  ],
+  "education": [
+    {
+      "degree": "B.S. Computer Science",
+      "school": "University of California, Berkeley",
+      "year": 2015
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Solutions Architect Associate",
+      "issuer": "Amazon Web Services",
+      "year": 2022
+    }
+  ]
+}

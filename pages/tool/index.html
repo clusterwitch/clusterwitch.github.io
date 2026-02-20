@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Tailor | Resume Tailor</title>
+  <meta name="description" content="Portfolio + AI Resume Tailoring Tool">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+  <!-- Theme persistence script (run early to prevent FOUC) -->
+  <script>
+    (function() {
+      const THEME_KEY = 'site-theme';
+      const html = document.documentElement;
+      
+      // Get saved theme or use system preference
+      const savedTheme = localStorage.getItem(THEME_KEY);
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+      
+      // Set theme immediately to prevent flash
+      html.setAttribute('data-theme', theme);
+      
+      // Update theme toggle button icon on ready
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.getElementById('themeToggle');
+        if (toggle) {
+          updateToggleIcon();
+          toggle.addEventListener('click', toggleTheme);
+        }
+      });
+      
+      window.toggleTheme = function() {
+        const current = html.getAttribute('data-theme') || 'light';
+        const newTheme = current === 'light' ? 'dark' : 'light';
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem(THEME_KEY, newTheme);
+        updateToggleIcon(newTheme);
+      };
+      
+      function updateToggleIcon(theme) {
+        const toggle = document.getElementById('themeToggle');
+        const icon = toggle?.querySelector('.theme-icon');
+        const current = theme || html.getAttribute('data-theme') || 'light';
+        if (icon) {
+          icon.textContent = current === 'light' ? '🌙' : '☀️';
+        }
+      }
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+  <nav>
+    <a href="/" class="logo">Resume Tailor</a>
+    <ul>
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/pages/tool/">Tool</a></li>
+      <li><a href="/pages/about/">About</a></li>
+    </ul>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Dark/Light Mode">
+      <span class="theme-icon">🌙</span>
+    </button>
+  </nav>
+</header>
+
+  
+  <main class="site-main">
+    
+<div class="tool-container">
+  <h1>Resume Tailor</h1>
+  <p>Upload or paste your job description, resume, and templates. The tool will use AI to tailor your resume.</p>
+
+  <section class="tool-inputs">
+    <fieldset>
+      <legend>Job Description</legend>
+      <div>
+        <label>
+          <input type="file" id="jobDescFile" accept=".pdf,.txt" />
+          Upload PDF or TXT
+        </label>
+      </div>
+      <div>
+        <label>Or paste:</label>
+        <textarea id="jobDescText" placeholder="Paste job description here...">Senior Software Engineer (Full-Stack)
+TechCorp — San Francisco, CA | Remote OK
+
+About the Role:
+We're looking for an experienced full-stack engineer to join our core platform team. You'll design and build scalable services that power features used by millions of customers daily.
+
+Key Responsibilities:
+- Design and implement backend services using Node.js and PostgreSQL
+- Build responsive React frontends for internal and customer-facing applications
+- Optimize database performance and implement caching strategies
+- Collaborate with product, design, and data teams to define technical solutions
+- Mentor junior engineers and participate in code reviews
+- Participate in on-call rotation to ensure 24/7 service reliability
+- Own full lifecycle of features from ideation through production
+
+Required Skills:
+- 5+ years software engineering experience
+- Expert-level JavaScript/TypeScript
+- Strong React and Node.js experience
+- Database design and optimization (SQL)
+- Cloud infrastructure (AWS preferred)
+- RESTful APIs and API design principles
+- Git and version control
+- Understanding of microservices architecture
+- System design and scalability concepts</textarea>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Resume (JSON)</legend>
+      <label>
+        <input type="file" id="resumeFile" accept=".json" />
+        Upload resume.json
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Output Template (Markdown)</legend>
+      <label>
+        <input type="file" id="outputTemplateFile" accept=".md,.txt" />
+        Upload output_template.md
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>AI Prompt (Markdown)</legend>
+      <label>
+        <input type="file" id="aiPromptFile" accept=".md,.txt" />
+        Upload ai_prompt.md
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>AI Configuration</legend>
+      <div>
+        <label>
+          API Key (stored in browser memory, never sent to server):
+          <input type="password" id="apiKey" placeholder="sk-..." />
+        </label>
+      </div>
+      <div>
+        <label>
+          API Provider:
+          <select id="apiProvider">
+            <option value="openai">OpenAI (GPT-4)</option>
+            <option value="anthropic">Anthropic (Claude)</option>
+          </select>
+        </label>
+      </div>
+    </fieldset>
+
+    <button id="generateBtn" type="button">Generate Tailored Resume</button>
+  </section>
+
+  <section class="tool-output">
+    <div class="preview">
+      <h2>Preview</h2>
+      <div id="previewContent" contenteditable="true"></div>
+    </div>
+
+    <div class="actions">
+      <button id="copyBtn" type="button">Copy to Clipboard</button>
+      <button id="exportPdfBtn" type="button">Export as PDF</button>
+      <button id="printBtn" type="button">Print</button>
+    </div>
+  </section>
+
+  <section class="logs">
+    <details>
+      <summary>Debug Output</summary>
+      <pre id="debugLog"></pre>
+    </details>
+  </section>
+</div>
+
+<!-- Example data (loaded on page start) -->
+<script id="example-resume" type="application/json">
+{"name":"Jane Smith","email":"jane.smith@example.com","phone":"+1-555-0123","location":"San Francisco, CA","summary":"Experienced full-stack engineer with 8 years building scalable web applications. Expertise in React, Node.js, cloud architecture, and team leadership.","experience":[{"title":"Senior Software Engineer","company":"TechCorp","location":"San Francisco, CA","startDate":"2021-01","endDate":"present","responsibilities":["Led team of 5 engineers in redesigning core payment system, reducing latency by 60%","Architected microservices migration from monolith, enabling 3x scaling capacity","Implemented CI/CD pipeline reducing deployment time from 2 hours to 15 minutes","Mentored 3 junior engineers, 2 promoted to mid-level within 18 months"],"technologies":["React","Node.js","AWS","Docker","PostgreSQL"]},{"title":"Software Engineer","company":"StartupXYZ","location":"Remote","startDate":"2018-06","endDate":"2020-12","responsibilities":["Built real-time analytics dashboard serving 50k+ daily active users","Optimized database queries improving page load time by 45%","Collaborated with product team to define technical requirements for 10+ features","On-call rotation maintaining 99.9% uptime for production services"],"technologies":["React","Express.js","MongoDB","GraphQL","AWS Lambda"]}],"skills":["JavaScript/TypeScript","React","Node.js","AWS","Docker","PostgreSQL","System Design","Team Leadership","Agile/Scrum"],"education":[{"degree":"B.S. Computer Science","school":"University of California, Berkeley","year":2015}],"certifications":[{"name":"AWS Solutions Architect Associate","issuer":"Amazon Web Services","year":2022}]}
+</script>
+
+<script id="example-ai-prompt" type="text/plain">
+You are an expert resume writer and career coach. Your job is to tailor the provided resume to match the job description as closely as possible.
+
+## Context
+
+**Job Description:**
+
+
+**Candidate's Resume Data:**
+
+
+**Desired Output Format:**
+
+
+## Instructions
+
+1. **Analyze** the job description for key requirements, technical skills, soft skills, and responsibilities.
+2. **Reorder** the candidate's experience and skills to emphasize relevance to this specific role.
+3. **Rewrite** bullet points under each position to highlight achievements that directly align with the job requirements.
+4. **Match** technical keywords and terminology from the job description (without being dishonest).
+5. **Prioritize** the most relevant skills and experiences at the top.
+6. **Maintain** professional tone and factual accuracy.
+7. **Format** the output as Markdown following the provided template structure.
+
+## Output Requirements
+
+- Keep bullet points scannable and concise (1-2 lines each).
+- Use action verbs (Led, Built, Improved, Designed, etc.).
+- Quantify achievements when possible (e.g., "Improved performance by 40%").
+- Include metrics and results, not just tasks.
+- Focus on impact, not responsibilities.
+- Ensure grammar and spelling are perfect.
+
+## Return Format
+
+Return ONLY the tailored resume in Markdown format, following the template structure exactly. Do not include explanations, caveats, or meta-commentary.
+</script>
+
+<script id="example-output-template" type="text/plain">
+# 
+
+ | 
+
+## Professional Summary
+
+[Compelling 2-3 sentence summary highlighting key strengths, years of experience, and core competencies relevant to the target role. Position yourself as a strong fit.]
+
+## Professional Experience
+
+###  — 
+**
+
+- [Achievement with metrics; lead with most relevant to job description]
+- [Key accomplishment demonstrating impact]
+- [Technical skill or tool usage directly related to the role]
+- [Leadership, collaboration, or problem-solving achievement]
+
+###  — 
+**
+
+- [Relevant achievement with measurable result]
+- [Technical contribution or innovation]
+- [Cross-functional or team collaboration example]
+
+## Technical Skills
+
+[Skills prioritized by relevance to job description; use exact terminology from job posting where applicable]
+
+- **Languages/Frameworks:** [List most relevant first]
+- **Tools & Platforms:** [AWS, Docker, etc.]
+- **Methodologies:** [Agile, CI/CD, etc.]
+
+## Additional Skills
+
+- [Soft skills: Communication, leadership, problem-solving, etc.]
+
+## Education
+
+****, , 
+
+[Optional: Relevant coursework, honors, certifications]
+
+## Certifications & Achievements
+
+[If applicable: List relevant certifications, awards, publications]
+</script>
+
+<script src="/assets/js/lib/pdfParser.js" type="module"></script>
+<script src="/assets/js/lib/fileUpload.js" type="module"></script>
+<script src="/assets/js/lib/templateMerge.js" type="module"></script>
+<script src="/assets/js/lib/aiCall.js" type="module"></script>
+<script src="/assets/js/lib/markdownRender.js" type="module"></script>
+<script src="/assets/js/lib/pdfExport.js" type="module"></script>
+<script src="/assets/js/tool.js" type="module"></script>
+
+<!-- CDN Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.14.159/pdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  </main>
+  
+  <footer class="site-footer">
+  <p>&copy; 2026 You. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

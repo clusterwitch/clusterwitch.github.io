@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study: Cloud Migration Initiative | Resume Tailor</title>
+  <meta name="description" content="Portfolio + AI Resume Tailoring Tool">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+  <!-- Theme persistence script (run early to prevent FOUC) -->
+  <script>
+    (function() {
+      const THEME_KEY = 'site-theme';
+      const html = document.documentElement;
+      
+      // Get saved theme or use system preference
+      const savedTheme = localStorage.getItem(THEME_KEY);
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+      
+      // Set theme immediately to prevent flash
+      html.setAttribute('data-theme', theme);
+      
+      // Update theme toggle button icon on ready
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.getElementById('themeToggle');
+        if (toggle) {
+          updateToggleIcon();
+          toggle.addEventListener('click', toggleTheme);
+        }
+      });
+      
+      window.toggleTheme = function() {
+        const current = html.getAttribute('data-theme') || 'light';
+        const newTheme = current === 'light' ? 'dark' : 'light';
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem(THEME_KEY, newTheme);
+        updateToggleIcon(newTheme);
+      };
+      
+      function updateToggleIcon(theme) {
+        const toggle = document.getElementById('themeToggle');
+        const icon = toggle?.querySelector('.theme-icon');
+        const current = theme || html.getAttribute('data-theme') || 'light';
+        if (icon) {
+          icon.textContent = current === 'light' ? '🌙' : '☀️';
+        }
+      }
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+  <nav>
+    <a href="/" class="logo">Resume Tailor</a>
+    <ul>
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/pages/tool/">Tool</a></li>
+      <li><a href="/pages/about/">About</a></li>
+    </ul>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Dark/Light Mode">
+      <span class="theme-icon">🌙</span>
+    </button>
+  </nav>
+</header>
+
+  
+  <main class="site-main">
+    <!-- Case Study Template -->
+<article class="pm-case-study">
+  <div class="pm-section-container">
+<p><div class="pm-case-study-header">
+<a href="/pm/" class="pm-case-study-back">← Back to Portfolio</a>
+<h1 class="pm-case-study-title">Cloud Migration Initiative</h1>
+<p class="pm-case-study-subtitle">Coordinating multi-team infrastructure transformation from monolith to microservices</p>
+</div></p>
+<p><!-- Problem Section -->
+<section class="pm-case-study-section pm-case-study-problem">
+<h2>The Problem</h2>
+<div class="pm-case-study-content">
+<p>Our legacy monolithic system was becoming a maintenance bottleneck. Each feature release required coordination across the entire codebase, blocking parallel development. Scaling our infrastructure was also becoming cost-prohibitive.</p><p>The solution was clear technically (microservices), but organizationally complex: 3 engineering teams, 2 different cloud providers, 18-month runway, and unclear dependencies.</p>
+</div>
+</section></p>
+<p><!-- Approach Section -->
+<section class="pm-case-study-section pm-case-study-approach">
+<h2>My Approach</h2>
+<div class="pm-case-study-content">
+<ul><li><strong>Dependency mapping:</strong> Created a visual dependency map in Confluence showing which services could migrate in parallel vs. sequential order</li><li><strong>Risk identification:</strong> Worked with infrastructure lead to identify 8 critical risks (data consistency, performance regression, etc.) and documented mitigation strategies</li><li><strong>Milestone-based roadmap:</strong> Translated technical requirements into 4 phases, each with clear entry/exit criteria—vs. a vague 'do migration' goal</li><li><strong>Ownership clarity:</strong> Assigned each team a 'primary owner' + 'support owner' for every phase to prevent confusion</li><li><strong>Regular syncs &amp; documentation:</strong> Held bi-weekly steering committee with engineering, ops, and leadership; maintained a shared decision log</li></ul>
+</div>
+</section></p>
+<p><!-- Tools & Timeline -->
+<div class="pm-case-study-grid"></p>
+<p><section class="pm-case-study-section pm-case-study-tools">
+<h3>Tools &amp; Methods</h3>
+<ul class="pm-case-study-list"></p>
+<p><li>Confluence for dependency mapping and decision logs</li></p>
+<p><li>Jira with custom workflows for multi-team coordination</li></p>
+<p><li>Figma for architecture diagrams</li></p>
+<p><li>Datadog for metrics and observability during migration</li></p>
+<p><li>Slack for sync coordination and status updates</li></p>
+<p></ul>
+</section></p>
+<p><section class="pm-case-study-section pm-case-study-timeline">
+<h3>Timeline</h3>
+<p>16-week migration timeline (Q1–Q2 2024). Delivered 2 weeks ahead of schedule.</p>
+</section></p>
+<p></div></p>
+<p><!-- Outcome Section -->
+<section class="pm-case-study-section pm-case-study-outcome">
+<h2>Outcome</h2>
+<div class="pm-case-study-content">
+<ul class="pm-case-study-metrics"></p>
+<p><li>
+<strong>On-Time Delivery:</strong> Completed 2 weeks early despite complexity
+</li></p>
+<p><li>
+<strong>Production Incidents:</strong> 0 —no downtime or data issues during cutover
+</li></p>
+<p><li>
+<strong>Cost Reduction:</strong> ~ 35% monthly infrastructure savings
+</li></p>
+<p><li>
+<strong>Development Velocity:</strong> Parallel development enabled 3 teams to work independently for first time
+</li></p>
+<p></ul>
+</div>
+</section></p>
+<p><!-- Lessons Section -->
+<section class="pm-case-study-section pm-case-study-lessons">
+<h2>What I Learned</h2>
+<div class="pm-case-study-content">
+<p><strong>1. Visualization beats narratives.</strong> Before the dependency map existed, teams had different mental models of the work. The visual cleared up assumptions in one meeting—saved weeks of rework.</p><p><strong>2. Risk management is risk prevention.</strong> Documenting 8 risks upfront didn't eliminate them—but it meant we had answers ready when issues arose. Teams felt 'prepared, not surprised.'</p><p><strong>3. Ownership clarity prevents thrashing.</strong> Clear primary/support roles meant fewer 'whose job is this?' moments. Decision-making sped up 3x.</p><p><strong>4. Deliver early if you can—it compounds trust.</strong> Finishing 2 weeks early built so much goodwill that the next initiative requested me as PM without hesitation. Speed + reliability = career currency.</p>
+</div>
+</section></p>
+<p><!-- CTA -->
+<div class="pm-case-study-cta">
+<a href="/pm/" class="pm-button pm-button-primary">← Back to Portfolio</a>
+</div></p>
+  </div>
+</article>
+
+  </main>
+  
+  <footer class="site-footer">
+  <p>&copy; 2026 You. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
