@@ -11,14 +11,10 @@
             "id": "33c02054ccba6333",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DEPLOY.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "DEPLOY"
+              "title": "New tab"
             }
           }
         ]
@@ -94,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DEPLOY.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for DEPLOY"
+              "title": "Backlinks"
             }
           },
           {
@@ -113,12 +108,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DEPLOY.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from DEPLOY"
+              "title": "Outgoing links"
             }
           },
           {
@@ -156,13 +150,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DEPLOY.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of DEPLOY"
+              "title": "Outline"
             }
           }
         ]
@@ -185,27 +178,36 @@
   },
   "active": "33c02054ccba6333",
   "lastOpenFiles": [
-    "_site/pm/case-studies/onboarding-redesign/index.html",
-    "_site/pm/case-studies/cloud-migration/index.html",
-    "_site/pm/case-studies/onboarding-redesign",
-    "_site/pm/case-studies/cloud-migration",
-    "_site/pm/case-studies",
-    "_site/pm",
-    "_site/index.html",
-    "_site/pages/tool/index.html",
-    "_site/pages/about/index.html",
-    "_site/pages/tool",
-    "_site/pages/about",
+    "docs/pm/case-studies/onboarding-redesign/index.html",
+    "docs/pm/case-studies/cloud-migration/index.html",
+    "docs/pm/case-studies/onboarding-redesign",
+    "docs/pm/case-studies/cloud-migration",
+    "docs/pm/case-studies",
+    "docs/pm",
+    "docs/index.html",
+    "docs/pages/tool/index.html",
+    "docs/pages/about/index.html",
+    "docs/pages/tool",
+    "docs/pages/about",
+    "docs/assets/images/clusterwitch.png",
+    "docs/templates/output_template.md",
+    "docs/templates/ai_prompt.md",
     "_site/assets/images/clusterwitch.png",
     "_site/templates/output_template.md",
     "_site/templates/ai_prompt.md",
-    "src/assets/images/clusterwitch.png",
-    "DOCS_INDEX.md",
-    "PROJECT_COMPLETE.md",
-    "src/pages/pm/case-studies/cloud-migration.md",
-    "PROJECT_PLAN.md",
-    "QUICKSTART.md",
     "src/pages/pm/case-studies/onboarding-redesign.md",
-    "README.md"
+    "src/pages/pm/case-studies/cloud-migration.md",
+    "src/assets/images/clusterwitch.png",
+    "src/templates/output_template.md",
+    "src/templates/ai_prompt.md",
+    "src/pages/about.md",
+    "README.md",
+    "QUICKSTART.md",
+    "PROJECT_PLAN.md",
+    "PROJECT_COMPLETE.md",
+    "DOCS_INDEX.md",
+    "DEPLOY.md",
+    "COMMANDS.md",
+    "BUILD_COMPLETE.md"
   ]
 }
